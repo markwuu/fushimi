@@ -1,33 +1,207 @@
-.App {
-  text-align: center;
-}
+ * {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+ }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
+ .container {
+   font-family: "Lato", sans-serif;
+   line-height: 1.7;
+   padding-top: 40px;
+   padding-bottom: 40px;
+ }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+ .header {
+   background-image: linear-gradient(to right bottom,
+       rgba(162, 60, 29, 0.93),
+       rgba(228, 104, 51, 0.3)),
+     url(../src/fushimi.jpg);
+   background-position: bottom;
+   background-size: cover;
+   height: 92vh;
+ }
 
-.App-link {
-  color: #61dafb;
-}
+ ul {
+   list-style-type: none;
+   padding: 0;
+ }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+ li a {
+   color: rgb(201, 178, 178);
+   float: right;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 15px;
+   font-weight: 400;
+   letter-spacing: 2px;
+   margin: 40px;
+   text-decoration: none;
+   text-transform: uppercase;
+ }
+
+ li a:hover {
+   color: white;
+ }
+
+ .logo-box {
+   left: 30px;
+   position: absolute;
+   top: 90px;
+ }
+
+ .logo {
+   animation: fadeIn 2.5s 0s;
+   height: 50vh;
+   opacity: .5;
+ }
+
+ @keyframes fadeIn {
+   0% {
+     opacity: 0;
+   }
+
+   100% {
+     opacity: .5;
+   }
+ }
+
+ .text-box {
+   left: 50%;
+   position: absolute;
+   text-align: center;
+   top: 55%;
+   transform: translate(-50%, -50%);
+ }
+
+ .heading-primary {
+   backface-visibility: hidden;
+   color: #fff;
+   margin-bottom: 60px;
+   text-transform: uppercase;
+ }
+
+ .heading-primary-main {
+   animation: moveInLeft 1.5s ease-in;
+   display: block;
+   font-family: 'Condiment', cursive;
+   font-size: 45px;
+   font-weight: 100;
+   letter-spacing: 19px;
+ }
+
+ .heading-primary-sub {
+   animation: moveInBottom 1.58s ease-in;
+   display: block;
+   font-size: 20px;
+   font-weight: 400;
+   letter-spacing: 10px;
+ }
+
+ @keyframes moveInLeft {
+   0% {
+     opacity: 0;
+     transform: translateX(-100px);
+   }
+
+   100% {
+     opacity: 1;
+     transform: translate(0);
+   }
+ }
+
+ @keyframes moveInBottom {
+   0% {
+     opacity: 0;
+     transform: translateY(30px);
+   }
+
+   100% {
+     opacity: 1;
+     transform: translate(0);
+   }
+ }
+
+ @keyframes fadeInFully {
+   0% {
+     opacity: 0;
+   }
+
+   100% {
+     opacity: 1;
+   }
+ }
+
+ #uploadContainer {
+   margin-bottom: 30px;
+   padding-top: 40px;
+ }
+
+ #upload {
+   background: #fff;
+   border-radius: 10px;
+   border: none;
+   color: #000;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 13.7px;
+   opacity: 0.5;
+   padding: 15px 37px;
+   text-transform: uppercase;
+   transition: 0.75s;
+ }
+
+ #upload:hover {
+   opacity: 1;
+ }
+
+ label:hover {
+   transform: translateY(-3px);
+ }
+
+ input[type=file] {
+   height: 0.1px;
+   opacity: 0;
+   overflow: hidden;
+   position: absolute;
+   width: 0.1px;
+   z-index: -1;
+ }
+
+ input[type=file]:hover {
+   opacity: 0;
+ }
+
+ input[type=file]:focus {
+   opacity: 0;
+ }
+
+ input {
+   border-radius: 10px;
+   border: none;
+   cursor: pointer;
+   font-family: 'Montserrat', sans-serif;
+   font-size: 15px;
+   opacity: 0.5;
+   padding: 15px 15px;
+   text-align: center;
+   text-decoration: none;
+   text-transform: uppercase;
+   transition: 0.5s;
+ }
+
+ input:hover {
+   box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+   opacity: 1;
+   transform: translateY(-3px);
+ }
+
+ input:active {
+   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+   transform: translateY(-3px);
+ }
+
+ input:focus {
+   box-shadow: 0 5px 5px rgba(0, 0, 0, .2);
+   opacity: 1;
+   outline: none;
+   transform: translateY(-3px);
+ }
